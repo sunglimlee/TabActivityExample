@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         val viewPager: ViewPager = binding.viewPager
+        viewPager.setPageTransformer(true, ZoomOutPageTransformer())
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
